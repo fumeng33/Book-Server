@@ -25,7 +25,7 @@ const Login = (props) => {
     e.preventDefault();
 
     axios
-      .post(`${process.env.REACT_APP_API_URL}/auth/signin`, user)
+      .post(`https://bookdb2.herokuapp.com/auth/signin`, user)
       .then((res) => {
         setOpen(false);
         storeTokenOnLocalStorage(res.data.token);
